@@ -10,7 +10,7 @@
     - 인사이드 자바스크립트
         - ![책](http://image.kyobobook.co.kr/images/book/large/652/l9788968480652.jpg)
     - 자바스크립트+jQuery 완전정복 스터디 1,2,3권
-        - ![책] (http://image.kyobobook.co.kr/images/book/large/129/l9791158390129.jpg)
+        - ![책](http://image.kyobobook.co.kr/images/book/large/129/l9791158390129.jpg)
 ## 커리큘럼
 - 인사이드 자바스크립트
     - 임해빈 연구원  Chapter 3. 자바스크립트 데이터 타입과 연산자
