@@ -7,5 +7,5 @@
     - 2차 청문회 : 미정 :thought_balloon:
     
 - 스터디 인원
-    - 총원 : 5 명(전경환 :smiley_cat:,심재욱 :angel:,정영환 :kissing_cat:,김우석 :guardsman: ,임해빈 /play trombone)
+    - 총원 : 5 명(전경환 :smiley_cat:,심재욱 :pig2:,정영환 :kissing_cat:,김우석 :pig2: ,임해빈 :sunflower:)
      
