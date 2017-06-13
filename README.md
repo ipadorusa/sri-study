@@ -5,7 +5,7 @@
     - 6월 21일 (매주 수요일)
 - 방식 : 1 reader + 청취 & 질문 (해당 방식 1회 진행후 보완할 부분 있을시 변경)
 - 인원
-    - 총원 : 5 명(전경환 :smiley_cat:,심재욱 :relaxed:,정영환 :kissing_cat:,김우석 :pig2: ,임해빈 :sunflower:)
+    - 총원 : 5 명(전경환 :smiley_cat:,심재욱 :relaxed:,정영환 :kissing_cat:,김우석 :pig2: ,임해빈 :heart_eyes:)
 - 책
     - 인사이드 자바스크립트
         - ![책](http://image.kyobobook.co.kr/images/book/large/652/l9788968480652.jpg)
