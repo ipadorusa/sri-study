@@ -21,7 +21,8 @@ console.log(
     typeof floatNum,
     typeof singleQuoteStr,
     typeof dobuleQuoteStr,
-    typeof boolVar,
+    typeof singleChar,
+    typeof boolVar,    
     typeof nullVar,
     typeof emptyVar
 );
