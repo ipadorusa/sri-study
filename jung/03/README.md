@@ -36,11 +36,12 @@
 
     : 참조 객체의 경우 객체 변수가 외부에 있다 하더라도 참조하고 있는 객체를 내부에서 변경시킬 수 있다.
     
-    : var a = 1; var b = a;  // a의 1과 b의 1은 별개 입니다.
+        var a = 1; var b = a;  // a의 1과 b의 1은 별개 입니다.
+        
     
-    : var stooge = {'first-name' : 'Jerome', 'last-name' : 'Howard'}
+        var stooge = {'first-name' : 'Jerome', 'last-name' : 'Howard'}
     
-      var x = stooge;  // x와 stooge는 같은 객체를 참조합니다.
+        var x = stooge;  // x와 stooge는 같은 객체를 참조합니다.
 
 
 - 3.4
