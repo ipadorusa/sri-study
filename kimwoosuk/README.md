@@ -34,7 +34,7 @@
     - 일치 연산자
     - 단항 연산자 (단 하나의 값에만 적용되는 연산자)
         - 증감 연산자
-            -
+           
             ```javascript
             var age = 29;
             ++age;
@@ -42,21 +42,21 @@
             --age;
             age = age -1;
             ```
-            -
+            
             ```javascript
             var age = 29;
             var anotherAge = --age + 2;
             alert(age);        //28
             alert(anotherAge); //30
             ```
-            -
+            
             ```javascript    
             var num1 = 2;
             var num2 = 20;
             var num3 = --num1 + num2;  //21
             var num4 = num1 + num2;    //21
             ```
-            - 
+            
             ```javascript    
             var age = 29;
             age++;
