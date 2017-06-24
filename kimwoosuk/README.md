@@ -46,14 +46,19 @@
             var anotherAge = --age + 2;
             alert(age);        //28
             alert(anotherAge); //30
+        ```
+        ```javascript    
             var num1 = 2;
             var num2 = 20;
             var num3 = --num1 + num2;  //21
             var num4 = num1 + num2;    //21
+        ```
+        ```javascript    
             var age = 29;
             age++;
             var num1 = 2;
             var num2 = 20;
             var num3 = num1-- + num2;   // 22
             var num4 = num1 + num2;     // 21
+        ```    
 
