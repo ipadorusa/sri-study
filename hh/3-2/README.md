@@ -30,11 +30,21 @@ x++  // 피연산자 연산자
 
 - - -
 
-**삼항 연산자**
+**삼항 연산자 (조건 연산자)**
 
 조건에 따라 두 식 중 하나를 반환한다.
 
 조건 ? 값1 (true) : 값2 (false)
+
+<pre>
+<code>
+var a = 11;
+var b = (a>=10) ? "메롱" : "바보"
+// a가 10보다 같거나 클 때 '메롱'을 b에 대입한다. 아니면 '바보'
+</code>
+</pre>
+
+
 
 
 if..else 문의 단축형으로 사용할 수 있다.
@@ -52,6 +62,7 @@ if ( a > b ) {
 ( a > b ) ? c = 10 : c = 20;
 </code>
 </pre>
+
 
 - - -
 
@@ -319,6 +330,7 @@ x < 7 && y < 4   // false
 </code>
 </pre>
 
+- - - 
 
 **||논리합**
 
@@ -332,6 +344,7 @@ x == 7 || y == 4;    // false
 </code>
 </pre>
 
+- - - 
 
 **!논리부정**
 
@@ -353,6 +366,9 @@ NaN == true;        // false
 !NaN == true;       // true
 </code>
 </pre>
+
+
+- - - 
 
 #### 비트연산자
 
@@ -382,257 +398,159 @@ NaN == true;        // false
 
 사라지는 비트를 버리면서 a의 이진수의 각 비트를 b비트 만큼 이동시킨 값을 반환
 
-**부호없는 오른쪽 시프트 >>> **
+**부호없는 오른쪽 시프트 >>>**
  a >>> b 사라지는 비트를 버리고 왼쪽에서 0을 이동시키면서, a의 이진수의 각 비트를 b비트 만큼 이동시킨 값을 반환.
 
 
 
 
 
+- - - 
 
 
-조건(삼항)연산자
-
-조건 ? 값1 : 값2
-
-조건이 참이라면 조건 연산자는 값1, 아니면 값2
-
-
-
-var a = 11;
-
-var b = (a>=10) ? "메롱" : "바보"
-
-a가 10보다 같거나 클 때 '메롱'을 b에 대입한다. 아니면 '바보'
-
-
-
-
-
-
-
-콤마(쉼표)연산자
+#### 콤마(쉼표)연산자
 
 두 피연산자를 비교하고, 마지막 피연산자의 값을 반환.
 
 for 반복문 안에서 주로 사용.
 
-
-
-for(var i =0, j=9; i<=j; i++, j--)
-
-
-
+<pre>
+<code>
+for(var i =0, j=9; i<=j; i++, j--){ 
+    ... 
+}
+</code>
+</pre>
+<pre>
+<code>
 var x = (3, 5);
-
-console.log(x);
-
-5
-
+console.log(x);     // 5
+</code>
+</pre>
 
 
-http://knphouse.tistory.com/103
+- - - 
 
-
-
-
-
-
-
-
-
-delete연산자
+#### delete연산자
 
 객체의 속성을 제거할 때 사용, 삭제 성공시 ture, 실패시 false 반환
 
 
-
+<pre>
+<code>
 var a = new Array (10, 11, 12, 13, 14);
+delete a[1];        // [10, undefined × 1, 12, 13, 14]
+a.length;           // 5
+</code>
+</pre>
 
-delete a[1];
-
-
-
-[10, undefined × 1, 12, 13, 14]
-
-
-
-a.length;
-
-5
-
-
-
+<pre>
+<code>
 var obj = new Object();
-
 obj.name = "haebin";
-
 obj.age = 28;
-
 delete obj.name;
-
 delete obj['age'];
+console.log(obj.name, obj.age)      // undefined undefined
+</code>
+</pre>
 
-
-
-console.log(obj.name, obj.age)
-
-undefined undefined
-
-
-
- delete연산자보다 undefined 나 null 값으로 만드는 것이 속도가 좀 더 빠르다.
+delete연산자보다 undefined 나 null 값으로 만드는 것이 속도가 좀 더 빠르다.
 
 delete는 단순히 객체와 속성의 연결을 끊을 뿐 실제로 메모리에서 제거하는 것은 아니다.
 
 
+- - - 
 
-
-
-
-
-typeof
+#### typeof 연산자
 
 정보를 "Number", "String", "Boolean", "Object", "Function", "undefined" 라는 문자열로 반환한다.
 
 자료형을 확인할 때 사용.
 
+- - - 
 
-
-
-
-
-
-void
-
+#### void
 단항 undefined 연산자
-
 피연산자를 실행하고 undefined를 반환.
-
-
-
 피연산자를 실행해야하지만 결과를 노출하고 싶지 않을 때 사용.
-
 전달인자가 어느값이어도 상관없지만 할당하지 않으면 에러가 발생한다.
 
-
-
+<pre>
+<code>
 void(0); // undefined
 void(); // SyntaxError: expected expression, got ')'
-
+</code>
+</pre>
 
 이동할 주소가 없는 앵커 태그가 필요할 때 종종 사용
+<pre>
+<code>
+    <a href="javascript:void(0)">test</a>
+</code>
+</pre>
 
-
-
-<a href="javascript:void(0)">test</a>
-
-
-in
+- - - 
+#### in
 
 객체나 배열에 특정 속성이 존재하는지 확인.
-
+<pre>
+<code>
 var sri = ['yh','hb','ws','jw'];
+"hb" in sri     // false (hb은 속성이 아니라 값)
+0 in sri        // true
+4 in sri        // false
+</code>
+</pre>
 
-
-
-"hb" in sri  
-
-false (hb은 속성이 아니라 값)
-
-0 in sri
-
-true
-
-4 in sri
-
-false
-
-
-
+<pre>
+<code>
 var hb { name : "Haebin", age : 28 };
-
-"name" in hb 
-
-true
-
-
-
+"name" in hb            // true
 "NaN" in Number         // true
 "length" in String      // true
-
+</code>
+</pre>
 
 in은 for-in 반복문에서도 사용된다.
 
 
-
+<pre>
+<code>
 var n = { a: 1, b: 2};
 var propNames = [];
 for (var ele in n) {
    propNames.push(ele);
 }
+</code>
+</pre>
 
+- - - 
 
-
-
-
-
-instanceof
+#### instanceof
 
 객체의 프로토타입 체인에 생성자 프로토타입이 존재하는지 테스트한다.
 
-좌변의 피연산자로 객체를 받고, 우변의 피연산자로 생성자를 받는다.
-
-????
+좌변의 피연산자로 객체를 받고, 우변의 피연산자로 생성자를 받는다. ????
 
 
+- - - 
 
+#### 연산자 우선순위
 
-
-
-
-
-
-
-
-
-
-
-
-연산자 우선순위
-
-맴버 연산자 .[]
-
-객체호출/생성연산자 () new
-
-부정/증가 연산자 ! ~ - + ++ -- typeof void delete
-
-곱셈/나눗셈 */%
-
-덧셈/뺄셈 +-
-
-비트단위 시프트 << >> >>>
-
-관계연산자 < <= > >= in instanceof
-
-==, !=
-
-비트논리곱 &
-
-비트배타논리합 ^
-
-비트논리합 |
-
-논리곱 &&
-
-논리합 ||
-
-조건연산자 ?:
-
-대입 연산 = += -= *= /= %= <<= >>= &= ^= ~=
-
-콤마 ,
-
-
-
-출처: http://gogumaguma.tistory.com/entry/연산자 [히ㅎ]
+1. 맴버 연산자 .[]
+2. 객체호출/생성연산자 () new
+3. 부정/증가 연산자 ! ~ - + ++ -- typeof void delete
+4. 곱셈/나눗셈 */%
+5. 덧셈/뺄셈 +-
+6. 비트단위 시프트 << >> >>>
+7. 관계연산자 < <= > >= in instanceof
+8. ==, !=
+9. 비트논리곱 &
+10. 비트배타논리합 ^
+11. 비트논리합 |
+12. 논리곱 &&
+13. 논리합 ||
+14. 조건연산자 ?:
+15. 대입 연산 = += -= *= /= %= <<= >>= &= ^= ~=
+16. 콤마 ,
