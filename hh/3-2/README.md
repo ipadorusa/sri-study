@@ -438,9 +438,10 @@ console.log(x);     // 5
 
 - - - 
 
-### delete연산자
+### delete
 
-단항연산자. 객체의 속성을 제거할 때 사용, 삭제 성공시 ture, 실패시 false 반환
+단항연산자. 객체의 속성을 제거할 때 사용한다.
+삭제 성공시 ture, 실패시 false 반환
 
 
 <pre>
@@ -467,7 +468,7 @@ delete연산자보다 undefined 나 null 값으로 만드는 것이 속도가 �
 delete는 단순히 객체와 속성의 연결을 끊을 뿐 실제로 메모리에서 제거하는 것은 아니다.
 
 
-### typeof 연산자
+### typeof
 
 정보를 "Number", "String", "Boolean", "Object", "Function", "undefined" 라는 문자열로 반환한다.
 
@@ -489,7 +490,7 @@ void(); // SyntaxError: expected expression, got ')'
 이동할 주소가 없는 앵커 태그가 필요할 때 종종 사용
 <pre>
 <code>
-    <a href="javascript:void(0)">test</a>
+    a href="javascript:void(0)">
 </code>
 </pre>
 
