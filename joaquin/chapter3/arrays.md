@@ -4,7 +4,7 @@
 
 ### methods
 
-1. *isArray()*
+1. ***isArray()***
 2. ~~from()~~
 3. ~~of()~~
 
@@ -28,21 +28,21 @@
 2. join()
 3. slice()
 4. toString()
-5. *idexOf()*
-6. *lastIndexOf()*
+5. ***idexOf()***
+6. ***lastIndexOf()***
 7. ~~toSource()~~
 8. ~~toLocaleString()~~
 9. ~~includes()~~
 
 ### iteration methods
 
-1. *every()*
-2. *filter()*
-3. *forEach()*
-4. *map()*
-5. *reduce()*
-6. *reduceRight()*
-7. *some()*
+1. ***every()***
+2. ***filter()***
+3. ***forEach()***
+4. ***map()***
+5. ***reduce()***
+6. ***reduceRight()***
+7. ***some()***
 8. ~~entries()~~
 9. ~~find()~~
 10. ~~findIndex()~~
