@@ -1,5 +1,5 @@
 #배열
-## 배열 표현방법
+## 배열 생성방법
     var arr = new Array(element0, element1, ..., elementN);
     var arr = Array(element0, element1, ..., elementN);
     var arr = [element0, element1, ..., elementN];
