@@ -7,28 +7,33 @@
 
 
 #### 1. forEach()
-+배열을 순회하는 매서드 각 원소에 대하여 지정한 함수를 각각 호출한다
-+break 문으로 종료 시킬 수 없다
+배열을 순회하는 매서드 각 원소에 대하여 지정한 함수를 각각 호출한다
+break 문으로 종료 시킬 수 없다
 var data = [,1,2,3,4,5];	//배열에 속한 모든 원소의 합을 계산한다.
-+var sum = 0;
-+data.forEach(function(value){sum += value;}); // 각 원소의 값을 sum에 더한다.
-+sum //15
-+//각 원소의 값을 증가시킨다
-+data.f
-+data //[2,3,4,5,6]
+var sum = 0;
+data.forEach(function(value){sum += value;}); // 각 원소의 값을 sum에 더한다.
+sum //15
+//각 원소의 값을 증가시킨다
+data.f
+data //[2,3,4,5,6]
 
 
 #### 2.map()
 배열의 각 원소를 매서드의 첫 번째 전달인자로 지정한 함수에 전달하고, 해당 함수의 반환 값을 새로운 배열로 반환
 희소배열이라면 희소배영을 반환
 a = [1,2,3];
+
 b = a.map(function(x) {resturn x*x]); //b는 [1,4,9]
 
 #### 3.filter()
 배열의 일부분을 반환한다(단, 전달한 함수는 조건자 함수(true false)여야 한다)
+
 반환값이 true, true인 조건식이면 조건자 함수를 통과해 매서드가 반환할 배열에 추가가 된다.
+
 희소배열의 경우엔 빈 원소를 건너뛰어서 반환되는 배열에는 빈 원소가 없다
+
 a = [5,4,3,2,1];
+
 filtertest = a.filter(function(x) {return x <4]); //[1,2,3]
 //희소배열의 빈 원소 제거하는 법
 var danse = sparse.filter(function() { return true; });
