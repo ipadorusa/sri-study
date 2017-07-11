@@ -49,3 +49,15 @@ b = [1,2,3,4,5];
 b.some(function(x) {return x%2 ===0; }) //true
 b.some(isNaN) //false
 
+#### 5.reduce(), reduceRight()
+
+
+#### 6.indexOf(), lastIndexOf()
+
+
+### 배열타입
+ECMAScript5 ArrayjsArray()함수를 통해 배열인지 판단 할 수 있다
+ECMAScript5 이전에는 instanceof를 사용시엔 종종 문제점이 웹 브라우저에서 발생한다
+- 하나의 창 또는 프레임이 열렸을 때 발생
+Array.isArray([])//true
+Array.isArray({})//false
