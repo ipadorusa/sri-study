@@ -1,4 +1,4 @@
-#배열
+# 배열
 
 ## 배열 생성방법
     - var arr = new Array(element0, element1, ..., elementN);
