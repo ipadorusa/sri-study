@@ -1,7 +1,29 @@
 
 ### 배열
+변수 하나에 여러 개의 데이터를 담을 수 있는 특별한 데이터형.
 
-문자, 숫자, 오브젝트 등 타입이 달라도 한꺼번에 들어갈 수 있다.
+
+
+일반 변수로 표현한 경우 여러 개의 변수를 만들어야 한다.
+
+<pre>
+<code>
+var name1 = "haebin"
+var name2 = "해빈"
+var name3 = "이매비니"
+</code>
+</pre>
+
+
+배열을 이용하면 하나의 변수에 모두 담을 수 있다. 연관있는 데이터를 하나로 묶어 관리할 때 주로 사용한다.
+<pre>
+<code>
+var name = ["haebin","해빈","이매비니"];
+</code>
+</pre>
+
+
+문자, 숫자, 오브젝트 등 타입이 다른 여러 개의 데이터형을 혼합해서 보관할 수 있다.
 
 <pre>
 <code>
@@ -23,7 +45,7 @@ var arr = ["1","2","3"]
 
 **Array() 생성자 함수**
 
--변수 선언과 동시에 할당
+1.변수 선언과 동시에 할당
 
 인자로 배열의 값을 넘겨주어 선언하는 방법, 호출할 때 인자 개수에 따라 동작이 다르므로 주의.
 
@@ -32,7 +54,7 @@ var arr = ["1","2","3"]
 
 <pre>
 <code>
-var arr = new Array(3);     // 크기가 40인 배열이 생성됨
+var arr = new Array(3);     // 크기가 3인 배열이 생성됨
 console.log(arr);           // [undefined, undefind, undefind]
 console.log(arr.length);    // 3
 </code>
@@ -49,7 +71,7 @@ console.log(arr2.length);      // 2
 </code>
 </pre>
 
--변수 선언 후 할당
+2.변수 선언 후 할당
 
 <pre>
 <code>
@@ -62,7 +84,7 @@ arr[2] = "3";
 
 
 ### 배열의 길이
-배열의 크기를 현재 배열의 인덱스 중 가장 큰 값을 기준으로 정한다. (배열의 length는 배열의 index 중 가장 큰 값 + 1)
+배열의 크기를 현재 배열의 인덱스 중 가장 큰 값을 기준으로 정한다. (배열의 length는 배열의 index 중 가장 큰 값 +1)
 
 실제 메모리는 length 크기처럼 할당되지는 않는다.
 
@@ -70,10 +92,10 @@ arr[2] = "3";
 
 <pre>
 <code>
-var arr = [0,1,2];
+var arr = [0, 1, 2];
 
 arr.length = 5;
-console.log(arr);        // 0,1,2,undefined,undefind
+console.log(arr);        // 0, 1, 2, undefined, undefined
 
 arr.length = 2;
 
@@ -102,7 +124,6 @@ emptyArr[5] = true;
 
 console.log(emptyArr);          // 100, undefined, undefined, "orange", undefined, true
 console.log(emptyArr.length);   // 6 
-
 </code>
 </pre>
 
@@ -215,8 +236,50 @@ delete연산자와는 다르게 배열 요소를 완전히 없애게 된다.
 
 
 
-
 ### 유사 배열 객체
+
+http://multifrontgarden.tistory.com/175
+
+배열이 아닌 일반 객체에 length 라는 property가 존재하면 자바스크립트에서는 해당 객체를 유사 배열 객체라고 부른다.
+
+유사 배열 객체의 특징은 자바스크립트의 배열 메서드를 사용하는게 가능해진다.
+
+<pre>
+<code>
+var arr = ["ㅎ"];
+var obj = {
+       name : "g",
+       length : 1
+   }
+   
+  arr.push("ㅎㅎ");
+  console.log(arr);     // ["ㅎ", "ㅎㅎ"]
+  
+  obj.push("gg");       // error
+</code>
+</pre>
+
+
+**arguments**
+함수에는 arguments라는 변수에 담긴 숨겨진 유사 배열이 있다.
+이 배열에는 함수를 호출할 때 입력한 인자가 담겨있다.
+
+
+
+<pre>
+<code>
+function test(){
+    var i, 
+        s = 0;
+    for (i = 0; i < arguments.length; i++){
+        console.log(arguments[i]);
+    }
+}
+
+test(1,2,3,4);
+
+</code>
+</pre>
 
 
 ### 다차원 배열
