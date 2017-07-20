@@ -3,7 +3,6 @@
 변수 하나에 여러 개의 데이터를 담을 수 있는 특별한 데이터형.
 
 
-
 일반 변수로 표현한 경우 여러 개의 변수를 만들어야 한다.
 
 <pre>
@@ -13,7 +12,6 @@ var name2 = "해빈"
 var name3 = "이매비니"
 </code>
 </pre>
-
 
 배열을 이용하면 하나의 변수에 모두 담을 수 있다. 연관있는 데이터를 하나로 묶어 관리할 때 주로 사용한다.
 <pre>
@@ -145,7 +143,7 @@ console.log(arr.length);        // 3
 </pre>
 
 
-동적으로 color와 name 프로퍼티를 추가했지만 length의 값이 바뀌지 않는다.
+동적으로 color와 name 속성을 추가했지만 length의 값이 바뀌지 않는다.
 
 
 <pre>
@@ -155,8 +153,8 @@ console.log(arr.length);        // 4
 </code>
 </pre>
 
-배열의 원소를 추가했을 때 length가 바뀐다.
-배열의 length프로퍼티는 배열 원소의 가장 큰 인덱스가 변했을 경우에만 변경된다.
+배열의 값을 추가했을 때 length가 바뀐다.
+length 프로퍼티는 배열 값의 가장 큰 인덱스가 변했을 경우에만 변경된다.
 
 
 <pre>
@@ -166,6 +164,7 @@ for(var prop in arr){
 }
 </code>
 </pre>
+
 <pre>
 <code>
 0 0
@@ -265,7 +264,6 @@ var obj = {
 이 배열에는 함수를 호출할 때 입력한 인자가 담겨있다.
 
 
-
 <pre>
 <code>
 function test(){
@@ -284,96 +282,143 @@ test(1,2,3,4);
 
 ### 다차원 배열
 
+배열의 요소를 하위 배열로 생성하는 것. 
+데이터를 테이블 형태의 행과 열로 저장할 수 있다.
+
+<pre>
+<code>
+
+var s = [[1,2,3,4,5],[6,7,8,9,10]];
+
+</code>
+</pre>
+
+
+배열 인덱스로 데이터에 접근하는 것은 1차원 배열과 같다.
 
 <pre>
 <code>
 var a = [];
 a[0] = [];
 a[0][0] = 1;
+</code>
+</pre>
 
+<pre>
+<code>
 var b = new Array();
 
 b[0] = new Array();
 b[0][0] = 1;
 
-var arr = ["1","2","3"];
-var arrr = ["1",["2-1","2-2","2-3"],"3"];
-
-var apt = new Array();
-var fourth = ["401호","402호","403호"];
-var third = ["301호","302호","303호"];
-var second =  ["201호","202호","203호"];
-var first =  ["101호","102호","103호"];
-
-apt[0] = fourth;
-apt[1] = third;
-apt[2] = second;
-apt[3] = first;
-
-for (var a = 0; a < apt.length; a++){
-    for (var i = 0; i < apt[a].length; i++){
-        document.write(apt[a][i]);
-    }
-
-}
 </code>
 </pre>
+
 
 ### 배열 메서드
 
 
-push() 메서드
+**push()**
 
-인수로 넘어온 항목을 배열의 끝에 추가하는 자바스크립트 표준 배열 메서드다.
+인수로 넘어 온 항목을 배열의 끝에 추가하는 메서드.
 
 배열의 현재 length 값의 위치에 새로운 원소값을 추가한다.
 
-
-
+<pre>
+<code>
 var arr = ["0", "1", "2"];
+arr.push("3");   // ["0","1","2","3"]
+</code>
+</pre>
 
-arr.push("3");
-
-console.log(arr); // ["0","1","2","3"]
-
-
-
+<pre>
+<code>
 // length 값 변경 후, push() 메서드 호출
-
 arr.length = 5;
-
-arr.push("4");
-
-console.log(arr); // ["0","1","2",undefined,"4"];
-
+arr.push("4");   // ["0","1","2",undefined,"4"];
+</code>
+</pre>
 
 
-접근시 : arr.push(i) 보다 arr[i] = value 를 사용한다
+**pop()**
+
+배열 끝에서부터 항목 제거하기
+
+<pre>
+<code>
+var arr = ["0", "1", "2"];
+arr.pop();   // ["0","1"]
+</code>
+</pre>
+
+**shift()**
+ 
+배열 앞에서부터 항목 제거하기
+
+<pre>
+<code>
+var arr = ["0", "1", "2"];
+arr.shift();    // ["1","2"]
+
+</code>
+</pre>
+
+**unshfit()**
+
+배열 맨 앞에 항목 추가
+
+<pre>
+<code>
+var arr = ["0", "1", "2"];
+arr.unshift("영","영영");  // ["영","영영", "0", 1", "2"]
+</code>
+</pre>
 
 
+**slice(시작, 끝)**
 
-pop(); 배열 끝에서부터 항목 제거하기
+배열 추출
 
-shift();  배열 앞에서부터 항목 제거하기
+<pre>
+<code>
+var arr = ["0", "1", "2", "3", "4"];
+arr.slice(1, 3);    // ["1", "2"]
+</code>
+</pre>
 
-unshfit(); 배열 맨 앞에 항목 추가
+**sort()**
 
-splice(); 인덱스 위치에 항목 제거
+오름차순 정렬
 
-slice(); 배열 복사
+<pre>
+<code>
+var arr = ["a", "c", "d", "e", "b"];
+arr.sort();    // ["a", "b", "c", "d", "e"]
+</code>
+</pre>
 
-reverse(); 배열 순서 반전
+**reverse()**
 
-sort(); 배열 정렬
+역순 정렬
 
-concat(); 새로운 배열 반환
+<pre>
+<code>
+var arr = ["0", "1", "2", "3", "4"];
+arr.reverse();    // ["4", "3", "2", "1", "0"]
+</code>
+</pre>
 
-join(); 문자열로 변환하여 합침
+**splice()**
+ 
+인덱스 위치에 항목 제거
 
-indexOf();
+<pre>
+<code>
+var arr = ["0", "1", "2", "3", "4"];
+arr.slice(1, 3);    // ["1", "2"]
+</code>
+</pre>
 
-lastIndexOf();
 
-forEach(); 각각의 요소에 함수를 호출
 
 
