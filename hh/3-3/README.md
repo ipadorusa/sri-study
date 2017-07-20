@@ -81,32 +81,9 @@ arr[2] = "3";
 </pre>
 
 
-### 배열의 길이
-배열의 크기를 현재 배열의 인덱스 중 가장 큰 값을 기준으로 정한다. (배열의 length는 배열의 index 중 가장 큰 값 +1)
-
-실제 메모리는 length 크기처럼 할당되지는 않는다.
-
-**배열 length 프로퍼티의 명시적 변경**
-
-<pre>
-<code>
-var arr = [0, 1, 2];
-
-arr.length = 5;
-console.log(arr);        // 0, 1, 2, undefined, undefined
-
-arr.length = 2;
-
-console.log(arr);       // 0, 1 
-console.log(arr[2]);    // undefined  (length를 벗어나는 값이 삭제된다.)
-</code>
-</pre>
-
-
-
 ### 배열의 접근
 
-배열 내 위치 인덱스 값을 넣어서 접근한다. 
+배열의 위치 인덱스 값을 넣어서 접근한다. 
 
 순차적으로 넣을 필요가 없이 아무 인덱스 위치에나 값을 동적으로 추가할 수 있다.
 
@@ -122,6 +99,26 @@ emptyArr[5] = true;
 
 console.log(emptyArr);          // 100, undefined, undefined, "orange", undefined, true
 console.log(emptyArr.length);   // 6 
+</code>
+</pre>
+
+
+### 배열의 길이
+배열의 크기를 현재 배열의 인덱스 중 가장 큰 값을 기준으로 정한다. (배열의 length는 배열의 index 중 가장 큰 값 +1)
+
+실제 메모리는 length 크기처럼 할당되지는 않는다.
+
+<pre>
+<code>
+var arr = [0, 1, 2];
+
+arr.length = 5;
+console.log(arr);        // 0, 1, 2, undefined, undefined
+
+arr.length = 2;
+
+console.log(arr);       // 0, 1 
+console.log(arr[2]);    // undefined  (length를 벗어나는 값이 삭제된다.)
 </code>
 </pre>
 
