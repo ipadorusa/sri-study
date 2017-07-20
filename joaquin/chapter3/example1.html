@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <title>Test</title>
     <style type="text/css">
+        body{font-size:13px;}
         p{margin:0;}
         #content {border:#999 1px solid;padding:10px;}
-        #input {border:#999 1px solid;padding:10px;margin-top:20px;font-family:'Lucida Console';}
+        #input {border:#999 1px solid;padding:10px;margin-top:20px;font-family:'Lucida Console';line-height:1.3;}
         #codeContainer{margin-left:20px;}
         #code {display:block;box-sizing:border-box;width:100%;border:#eee 1px solid;padding:10px;}
     </style>
@@ -26,8 +27,12 @@
     <button id="hint">hint</button>
 </div>
 <div id="input">
+    <p>var a = content.getElementsByTagName('li');</p>
+    <p>var b = content.getElementsByTagName('p');</p>
+    <p>console.log("a", a);</p>
+    <p>console.log("b", b);</p>
     <p>function excute() {</p>
-    <div id="codeContainer"><textarea id="code" rows="20"></textarea></div>
+    <div id="codeContainer"><textarea id="code" rows="10"></textarea></div>
     <p>}</p>
 </div>
 <script type="text/javascript">
