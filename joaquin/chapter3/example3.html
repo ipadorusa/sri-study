@@ -7,9 +7,9 @@
         body{font-size:13px;}
         p{margin:0;}
         #content {border:#999 1px solid;padding:10px;}
-        #input {border:#999 1px solid;padding:10px;margin-top:20px;font-family:'Lucida Console';line-height:1.3;}
+        #input {border:#999 1px solid;padding:10px;margin-top:20px;font-family:'Lucida Console';line-height:1.3;color:#666;}
         #codeContainer{margin-left:20px;}
-        #code {display:block;box-sizing:border-box;width:100%;border:#eee 1px solid;padding:10px;}
+        #code {display:block;box-sizing:border-box;width:100%;border:#eee 1px dotted;padding:5px 10px;color:#ff6600;font-family:'Lucida Console';}
     </style>
 </head>
 <body>
@@ -57,13 +57,13 @@
     });
     hint.addEventListener('click', function() {
         if(hintArr[hintCount] !== undefined) {
-            var vNode = document.createTextNode(hintArr[hintCount]+ '\n');
-            code.appendChild(vNode);
+            code.value += hintArr[hintCount]+ '\n';
             hintCount++;
         } else {
             hint.disabled = true;
         }
     });
+
 
     //pre code
     var a = content.getElementsByTagName('li');
