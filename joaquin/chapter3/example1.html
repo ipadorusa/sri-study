@@ -23,8 +23,10 @@
     <p>paragraph 2</p>
     <p>paragraph 3</p>
     <hr />
-    <button id="exec">excute</button>
-    <button id="hint">hint</button>
+    <button id="exec">excute !</button>
+    <button id="hint1">hint #1</button>
+    <button id="hint2">hint #2</button>
+    <button id="hint3">hint #3</button>
 </div>
 <div id="input">
     <p>var a = content.getElementsByTagName('li');</p>
@@ -39,8 +41,8 @@
     var content = document.getElementById('content'),
         code = document.getElementById('code'),
         exec = document.getElementById('exec'),
-        hint = document.getElementById('hint'),
-        hintArr = [
+        hint1 = document.getElementById('hint1'),
+        hintArr1 = [
             "for (i = 0; i < a.length; i++) {",
             "    a[i].style.color = 'red';",
             "}",
@@ -48,18 +50,55 @@
             "    b[i].style.color = 'red';",
             "}",
         ],
-        hintMax = hintArr.length,
-        hintCount = 0;
+        hintArr2 = [
+            "a.map(function (arg) {",
+            "    arg.style.color = 'red';",
+            "});",
+            "b.map(function (arg) {",
+            "    arg.style.color = 'red';",
+            "});",
+        ],
+        hintArr3 = [
+            "var c = [];",
+            "Array.prototype.push.apply(c, a);",
+            "Array.prototype.push.apply(c, b);",
+            "console.log('c', c);",
+            "c.map(function (arg) {",
+            "    arg.style.color = 'red';",
+            "});",
+        ],
+        hintMax1 = hintArr1.length,
+        hintMax2 = hintArr2.length,
+        hintMax3 = hintArr3.length,
+        hintCount1 = 0,
+        hintCount2 = 0,
+        hintCount3 = 0;
     exec.addEventListener('click', function() {
         var str = code.value;
         eval(str);
     });
-    hint.addEventListener('click', function() {
-        if(hintArr[hintCount] !== undefined) {
-            code.value += hintArr[hintCount]+ '\n';
-            hintCount++;
+    hint1.addEventListener('click', function() {
+        if(hintArr1[hintCount1] !== undefined) {
+            code.value += hintArr1[hintCount1]+ '\n';
+            hintCount1++;
         } else {
-            hint.disabled = true;
+            hint1.disabled = true;
+        }
+    });
+    hint2.addEventListener('click', function() {
+        if(hintArr2[hintCount2] !== undefined) {
+            code.value += hintArr2[hintCount2]+ '\n';
+            hintCount2++;
+        } else {
+            hint2.disabled = true;
+        }
+    });
+    hint3.addEventListener('click', function() {
+        if(hintArr3[hintCount3] !== undefined) {
+            code.value += hintArr3[hintCount3]+ '\n';
+            hintCount3++;
+        } else {
+            hint3.disabled = true;
         }
     });
 
