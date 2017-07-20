@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>test</title>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<p>a</p>
+<p>b</p>
+<p>c</p>
+<script type="text/javascript">
+    var a = document.getElementsByTagName('li');
+    var b = document.getElementsByTagName('p');
+    console.log("a", a);
+    console.log("b", b);
+    /*
+     var c = [];
+
+     Array.prototype.push.apply(c,a);
+     Array.prototype.push.apply(c,b);
+     console.log("c", c);
+
+     c.map(function(arg) {
+     arg.style.color = 'red';
+     });
+     var d = [];
+     a.map(function(arg) {
+     d.push(arg);
+     });
+     d.map(function(arg) {
+     arg.style.color = 'red';
+     });
+
+     console.log("d", d);
+     */
+</script>
+
+</body>
+</html>
