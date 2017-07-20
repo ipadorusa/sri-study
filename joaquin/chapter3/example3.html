@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <style type="text/css">
+        p{margin:0;}
+        #content {border:#999 1px solid;padding:10px;}
+        #input {border:#999 1px solid;padding:10px;margin-top:20px;font-family:'Lucida Console';}
+        #codeContainer{margin-left:20px;}
+        #code {display:block;box-sizing:border-box;width:100%;border:#eee 1px solid;padding:10px;}
+    </style>
+</head>
+<body>
+<div id="content">
+    <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+    </ul>
+    <p>paragraph 1</p>
+    <p>paragraph 2</p>
+    <p>paragraph 3</p>
+    <hr />
+    <button id="exec">excute</button>
+    <button id="hint">hint</button>
+</div>
+<div id="input">
+    <p>function excute() {</p>
+    <div id="codeContainer"><textarea id="code" rows="20"></textarea></div>
+    <p>}</p>
+</div>
+<script type="text/javascript">
+    var content = document.getElementById('content'),
+        code = document.getElementById('code'),
+        exec = document.getElementById('exec'),
+        hint = document.getElementById('hint'),
+        hintArr = [
+            "var c = [];",
+            "Array.prototype.push.apply(c, a);",
+            "Array.prototype.push.apply(c, b);",
+            "console.log('c', c);",
+            "c.map(function (arg) {",
+            "    arg.style.color = 'red';",
+            "});",
+        ],
+        hintMax = hintArr.length,
+        hintCount = 0;
+    exec.addEventListener('click', function() {
+        var str = code.value;
+        eval(str);
+    });
+    hint.addEventListener('click', function() {
+        if(hintArr[hintCount] !== undefined) {
+            var vNode = document.createTextNode(hintArr[hintCount]+ '\n');
+            code.appendChild(vNode);
+            hintCount++;
+        } else {
+            hint.disabled = true;
+        }
+    });
+
+    //pre code
+    var a = content.getElementsByTagName('li');
+    var b = content.getElementsByTagName('p');
+    console.log("a", a);
+    console.log("b", b);
+</script>
+</body>
+</html>
