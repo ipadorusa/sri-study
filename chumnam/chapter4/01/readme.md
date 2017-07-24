@@ -18,6 +18,7 @@ Function() 생성자 함수
 
 
 ### 함수 리터럴
+====================
 function add(x, y){
 	return x + y;
 }
