@@ -18,7 +18,12 @@ Function() 생성자 함수
 
 
 ### 함수 리터럴
-====================
+<pre>
+<code>
 function add(x, y){
 	return x + y;
 }
+</code>
+</pre>
+
+
