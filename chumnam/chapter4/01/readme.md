@@ -53,7 +53,9 @@ function add(x, y){
 
 ### 함수 호이스팅
 
-함수가 정의되지 않았음에도 코드 어딘가에 함수 선언문 형태로 정의한 함수가 있다면 그 함수의 호출이 가능하다.
+함수가 정의되지 않았음에도 코드 어딘가에 함수 선언문 형태로 정의한 함수가 있다면 그 함수의 호출이 가능합니다.
+
+- 이러한 이유는 변수 생성과 초기화 작업이 분리돼서 진행되기 때문입니다.
 
 
 구글의 자바스크립트 스타일 가이드 https://google.github.io/styleguide/javascriptguide.xml#JavaScript_Language_Rules
