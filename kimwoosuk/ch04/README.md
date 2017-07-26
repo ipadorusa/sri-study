@@ -17,7 +17,7 @@
     function a(){alert('a함수');}
     function a(){alert('b함수');}
 </code>
-<pre>
+</pre>
 
 
 
