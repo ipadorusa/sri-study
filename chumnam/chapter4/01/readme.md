@@ -39,8 +39,7 @@ var functionName = function(arg0, arg1, arg2){
 ## 함수 리터럴
 
 자바스크립트에서는 함수도 객체로 취급된다. <br>
-그래서 객체 리터럴 방식으로 일반 객체를 생성할 수 있는 것처럼 함수도 __함수 리터럴__을 이용해 함수를 생성할 수 있다
-
+그래서 객체 리터럴 방식으로 일반 객체를 생성할 수 있는 것처럼 함수도 __함수 리터럴__을 이용해 함수를 생성할 수 있다 <br>
 리터럴(코드상에서 데이터를 표현하는 방식을 말함)
 
 
@@ -67,40 +66,30 @@ function add(x, y){
 
 함수도 일반 객체처럼 취급될 수 있다.
 
-일급 시민
-
+__일급 시민__<br>
 1. 변수(variable)에 담을 수 있다
 2. 인자(parameter)로 전달할 수 있다
 3. 반환값(return value)으로 전달할 수 있다
 
-일급 객체
-
+__일급 객체__<br>
 객체를 일급 시민으로 취급한다
 
-일급 함수
-
-일급시민의 조건과 함께 추가적인 조건이 필요
-
+__일급 함수__<br>
+일급시민의 조건과 함께 추가적인 조건이 필요<br>
 1. 런타임(runtime) 생성이 가능하다
 2. 익명(anonymous)으로 생성이 가능하다
 
-
-JavaScript에서 함수가 1급 객체인 것이 중요한 이유
-
-1. 가장 중요한 장점은 바로 고차 함수(high order function)가 가능하다는 점이다.
+__JavaScript에서 함수가 1급 객체인 것이 중요한 이유__<br>
+1. 가장 중요한 장점은 바로 __고차 함수__(high order function)가 가능하다는 점이다.
 2. 1급 객체가 JavaScript의 클로져(closure)와 만나면 또 하나의 장점이 생긴다. JavaScript의 함수는 생성될 당시의 Lexical Environment를 기억하게 되는데, 함수를 주고받게 되면 이 Lexical Environment도 함께 전달된다. 이것을 이용해서 커링(currying)과 메모이제이션(memoization)이 가능해진다. (이해가안됨)
 
 
+__그냥__
 
-그냥
-
-객체선언에 리터널({})을 선호하는 이유
-
+객체선언에 리터널({})을 선호하는 이유<br>
 1.첫번째로 가독성이다. 
 2.속도(미비하지만 빠르다)
 3.overriden(재정의)에 대한 예방
-
-
 
 구글의 자바스크립트 스타일 가이드 https://google.github.io/styleguide/javascriptguide.xml#JavaScript_Language_Rules
 
