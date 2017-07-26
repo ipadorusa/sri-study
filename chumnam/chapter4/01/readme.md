@@ -3,9 +3,33 @@
 
 자바스크립트에서 함수를 생성하는 방법은 3가지가 있다.
 
-함수 선언문(function statement)
+함수 선언문? 식?(function statement)
+
+함수 선언부를 다른 코드보다 먼저 읽고 실행한다는 뜻
+
+<pre>
+<code>
+functionName(); 
+function functionName(arg0, arg1, arg2){
+	alert("hi"); 
+}
+</code>
+</pre>
+
+함수 선언전에 functionName()을 호출해도 정상적으로 동작하게 됩니다.
+
 
 함수 표현식(function expression)
+
+변수 선언과 비슷합니다.
+<pre>
+<code>
+functionName(); //오류 발생 - 함수가 존재하지 않습니다. 
+var functionName = function(arg0, arg1, arg2){
+	alert("hi"); 
+}
+</code>
+</pre>
 
 Function() 생성자 함수
 
