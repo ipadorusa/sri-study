@@ -60,6 +60,15 @@ function add(x, y){
 - 이러한 이유는 변수 생성과 초기화 작업이 분리돼서 진행되기 때문입니다.
 
 
+
+그냥
+
+객체선언에 리터널({})을 선호하는 이유
+
+1.첫번째로 가독성이다. 
+2.속도(미비하지만 빠르다)
+3.overriden(재정의)에 대한 예방
+
 구글의 자바스크립트 스타일 가이드 https://google.github.io/styleguide/javascriptguide.xml#JavaScript_Language_Rules
 
 
