@@ -3,7 +3,7 @@
 
 자바스크립트에서 함수를 생성하는 방법은 3가지가 있다.
 
-함수 선언문? 식?(function statement)
+## 함수 선언문? 식?(function statement)
 
 함수 선언부를 다른 코드보다 먼저 읽고 실행한다는 뜻
 
@@ -19,7 +19,7 @@ function functionName(arg0, arg1, arg2){
 함수 선언전에 functionName()을 호출해도 정상적으로 동작하게 됩니다.
 
 
-함수 표현식(function expression)
+## 함수 표현식(function expression)
 
 변수 선언과 비슷합니다. 차이점은 함수 이름이 선택 사항 이라는 점
 <pre>
@@ -31,7 +31,9 @@ var functionName = function(arg0, arg1, arg2){
 </code>
 </pre>
 
-Function() 생성자 함수
+## Function() 생성자 함수
+
+그냥 알고만 있자
 
 
 ## 함수 리터럴
