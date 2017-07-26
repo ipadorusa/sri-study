@@ -21,7 +21,7 @@ function functionName(arg0, arg1, arg2){
 
 함수 표현식(function expression)
 
-변수 선언과 비슷합니다.
+변수 선언과 비슷합니다. 차이점은 함수 이름이 선택 사항 이라는 점
 <pre>
 <code>
 functionName(); //오류 발생 - 함수가 존재하지 않습니다. 
