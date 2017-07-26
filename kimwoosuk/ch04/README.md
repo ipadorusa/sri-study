@@ -2,28 +2,22 @@
 
 ## 함수 
 <pre>
-    <code>
-        var a = function(){alert('a함수');}
-        var a = function(){alert('b함수');}
-        a();
-    </code>
-    <code>
-        a();
-        var a = function(){alert('a함수');}
-        var a = function(){alert('b함수');}        
-    </code>
-    <code>
-        a();
-        function a(){alert('a함수');}
-        function a(){alert('b함수');}
-    </code>
+<code>
+    var a = function(){alert('a함수');}
+    var a = function(){alert('b함수');}
+    a();
+</code>
+<code>
+    a();
+    var a = function(){alert('a함수');}
+    var a = function(){alert('b함수');}        
+</code>
+<code>
+    a();
+    function a(){alert('a함수');}
+    function a(){alert('b함수');}
+</code>
 <pre>
-
-
-
-
-
-
 
 
 
