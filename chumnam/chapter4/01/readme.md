@@ -51,6 +51,11 @@ function add(x, y){
 </pre>
 
 
+### 함수 호이스팅
+
+함수가 정의되지 않았음에도 코드 어딘가에 함수 선언문 형태로 정의한 함수가 있다면 그 함수의 호출이 가능하다.
+
+
 구글의 자바스크립트 스타일 가이드 https://google.github.io/styleguide/javascriptguide.xml#JavaScript_Language_Rules
 
 
