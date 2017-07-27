@@ -23,6 +23,7 @@
 - https://jsfiddle.net/ipadorusa/h3xrec2n/
 </pre>
 <code>
+<pre>
 // 기명 함수표현식(named function expression) 
 var company = function company() {  
     /* 실행코드 */
@@ -48,6 +49,7 @@ var company = function() {
 (function() {
     /* 실행코드 */
 })();
+</pre>
 </code>
 
 #### 단어 사전
