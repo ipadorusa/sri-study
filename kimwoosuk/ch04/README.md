@@ -22,7 +22,7 @@
 </code>
 - https://jsfiddle.net/ipadorusa/h3xrec2n/
 </pre>
-
+<code>
 // 기명 함수표현식(named function expression) 
 var company = function company() {  
     /* 실행코드 */
@@ -48,7 +48,7 @@ var company = function() {
 (function() {
     /* 실행코드 */
 })();
-
+</code>
 
 #### 단어 사전
  - Parameter 는 '파라미터' 또는 '매개변수'로,
