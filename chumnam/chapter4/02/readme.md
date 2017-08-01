@@ -2,9 +2,12 @@
 
 # 함수 객체 : 함수도 객체다
 
+
 ## 함수도 객체다
 
+
 ## 함수는 값으로 취급된다
+
 
 함수도 일반 객체처럼 취급될 수 있다.
 
@@ -25,7 +28,9 @@ __JavaScript에서 함수가 1급 객체인 것이 중요한 이유__<br>
 1. 가장 중요한 장점은 바로 __고차 함수__(high order function)가 가능하다는 점이다.
 2. 1급 객체가 JavaScript의 클로져(closure)와 만나면 또 하나의 장점이 생긴다. JavaScript의 함수는 생성될 당시의 Lexical Environment를 기억하게 되는데, 함수를 주고받게 되면 이 Lexical Environment도 함께 전달된다. 이것을 이용해서 커링(currying)과 메모이제이션(memoization)이 가능해진다. (이해가안됨)
 
+
 ### 변수나 프로퍼티의 값으로 할당
+
 <pre>
 <code>
 // 변수에 함수 할당
@@ -42,6 +47,7 @@ console.log(obj.baz()); // 200
 
 
 ### 함수인 자로 전달
+
 <pre>
 <code>
 // 함수 표현식으로 foo() 함수 생성
@@ -58,6 +64,7 @@ foo(function() {
 
 
 ### 리턴값으로 활용
+
 <pre>
 <code>
 // 함수를 리턴하는 foo() 함수 정의
