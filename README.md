@@ -22,6 +22,14 @@
     - 김우석 연구원  Chapter 5. 실행 컨텍스트와 클로저
     - 정영환 연구원  Chapter 7. 함수형 프로그래밍
     - 심재욱 연구원  Chapter 6. 객체지향 프로그래밍
-    
+### 일정
+    - 전경환 연구원 Chapter 4. 함수와 프로토타입 체이닝
+        - 2017-08-03 
+        - 2017-08-10
+        - 2017-08-17
+    - 이후 일정은 교육으로 인해 보류합니다.
+        - 8/21 전경환,임해빈 (교육 - JavaScript 첫걸음 CAMP)
+        - 8/28 조성창,심재욱,김우석 (교육 - Vue & ES6 정복 CAMP)
+
 ### 참고
 MDN (https://developer.mozilla.org/ko/docs/Web/JavaScript)
